@@ -16,17 +16,17 @@ def main():
     i = 1
     while i > 0:
         print("Menu")
-        print("----")
-        print("1. Encoder")
-        print("2. Decoder")
-        print("3. Exit Program")
-        menu = input("Choose an option: ")
+        print("----------")
+        print("1. Encode")
+        print("2. Decode")
+        print("3. Quit")
+        menu = input("Please enter an option: ")
         if int(menu) == 1:
-            x = input("Type in an 8 character password to encode: ")
+            x = input("Please enter your password to encode: ")
             encoded_password = encoder(x)
-            print(f"Encoded password: {encoder(x)}\n")
+            print("Your password has been encoded and stored!\n")
         elif int(menu) == 2:
-            print(f"Decoded password: {decoder(encoded_password)}\n")
+            print(f"The encoded password is {encoded_password}, and the original password is {decoder(encoded_password)}\n")
         elif int(menu) == 3:
             break
         else:
